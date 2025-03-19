@@ -12,14 +12,12 @@ def start():
     if not running:
         update()
         running = True
-    start_button.config(bg='light green')
 
 def pause():
     global running
     if running:
         stopwatch_label.after_cancel(update_time)
         running = False
-    pause_button.config(bg='orange')
 
 def reset():
     global running, hours, minutes, seconds, update_time
